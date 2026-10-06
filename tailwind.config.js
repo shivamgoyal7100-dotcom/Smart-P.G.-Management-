@@ -1,0 +1,48 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+          950: '#082f49', // Rich Dark Blue
+        },
+        darkBg: {
+          light: '#1e293b', // slate-800
+          DEFAULT: '#0f172a', // slate-900
+          dark: '#030712', // gray-950
+        },
+        accent: {
+          DEFAULT: '#f97316', // orange-500
+          hover: '#ea580c', // orange-600
+          light: '#ffedd5', // orange-100
+        }
+      },
+      fontFamily: {
+        sans: ['Outfit', 'Inter', 'sans-serif'],
+      },
+      boxShadow: {
+        'premium': '0 10px 30px -10px rgba(2, 12, 27, 0.3)',
+        'premium-hover': '0 20px 40px -15px rgba(2, 12, 27, 0.4)',
+        'glow-orange': '0 0 20px rgba(249, 115, 22, 0.25)',
+      },
+      backdropBlur: {
+        xs: '2px',
+      }
+    },
+  },
+  plugins: [],
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-darkBg text-slate-100 font-sans antialiased overflow-x-hidden scroll-smooth;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a; /* slate-900 */
+}
+::-webkit-scrollbar-thumb {
+  background: #334155; /* slate-700 */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f97316; /* orange-500 */
+}
+
+/* Glassmorphism Styles */
+.glass-card {
+  background: rgba(30, 41, 59, 0.6); /* slate-800 with opacity */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card-hover:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(249, 115, 22, 0.3); /* orange-500 with opacity */
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(2, 12, 27, 0.4), 0 0 20px rgba(249, 115, 22, 0.1);
+}
+
+.glass-nav {
+  background: rgba(15, 23, 42, 0.85); /* slate-900 with opacity */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-input {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.2s ease;
+}
+.glass-input:focus {
+  background: rgba(15, 23, 42, 0.8);
+  border-color: #f97316;
+  outline: none;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.15);
+}
+
+/* Custom Grid Background Overlay */
+.grid-bg {
+  background-image: radial-gradient(rgba(249, 115, 22, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Testimonial slider transitions */
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
